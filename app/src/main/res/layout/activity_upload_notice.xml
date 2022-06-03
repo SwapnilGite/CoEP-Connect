@@ -73,7 +73,9 @@
                 android:id="@+id/notice_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Notice" />
+                android:hint="Notice"
+                android:background="@null"
+                android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
