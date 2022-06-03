@@ -11,12 +11,14 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private CardView cardViewNotice;
+    private CardView cardViewEbook;
+
     private CardView logout;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
 
-    private CardView uploadNotice;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         cardViewNotice = (CardView) findViewById(R.id.addNotice);
         cardViewNotice.setOnClickListener(this);
+
+        cardViewEbook = (CardView) findViewById(R.id.addEbook);
+        cardViewEbook.setOnClickListener(this);
+
         logout = (CardView)findViewById(R.id.Logout_btn);
         logout.setOnClickListener(this);
+
         sharedPreferences = this.getSharedPreferences("login",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         if(sharedPreferences.getString("isLogin","false").equals("false"))
@@ -40,9 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(new Intent(MainActivity.this,LoginActivity.class));
         finish();
 
-        uploadNotice = (CardView) findViewById(R.id.addNotice);
 
-        uploadNotice.setOnClickListener(this);
 
     }
 
@@ -62,6 +67,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent i2;
                 i2 = new Intent(this,LoginActivity.class);
                 startActivity(i2);
+                break;
+
+
+            case R.id.addEbook:
+                Intent j;
+                j = new Intent(this, UploadPdf.class);
+                startActivity(j);
                 break;
 
 

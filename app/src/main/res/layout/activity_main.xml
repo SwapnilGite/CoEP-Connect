@@ -43,8 +43,8 @@
 
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="145dp"
+                    android:layout_height="139dp"
                     android:background="@color/white"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -135,7 +135,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/addTemp"
+                android:id="@+id/addEbook"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
