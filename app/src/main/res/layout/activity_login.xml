@@ -10,20 +10,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RelativeLayout
+            android:id="@+id/TopBar"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:background="@drawable/bottom_round"
-            android:id="@+id/TopBar">
+            android:background="@drawable/bottom_round">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/kdam"
                 android:text="Login"
                 android:textColor="@color/white"
-                android:layout_centerInParent="true"
-                android:textSize="25sp"
-                android:fontFamily="@font/kdam">
+                android:textSize="25sp">
 
             </TextView>
         </RelativeLayout>
