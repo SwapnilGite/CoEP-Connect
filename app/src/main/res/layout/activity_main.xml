@@ -98,7 +98,7 @@
                     <ImageView
                         android:layout_width="68dp"
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_blue"
+                        android:background="@drawable/circle_green"
                         android:padding="15dp"
                         android:src="@drawable/ic_gallery">
 
@@ -152,9 +152,9 @@
                     <ImageView
                         android:layout_width="68dp"
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_red"
+                        android:background="@drawable/circle_purple"
                         android:padding="15dp"
-                        android:src="@drawable/ic_notice">
+                        android:src="@drawable/ic_baseline_upload">
 
                     </ImageView>
 
@@ -169,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="NOTICE"
+                        android:text="Upload Ebook"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
@@ -236,7 +236,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/Temp2"
+                android:id="@+id/Logout_btn"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
@@ -254,9 +254,9 @@
                     <ImageView
                         android:layout_width="68dp"
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_red"
+                        android:background="@drawable/circle_black"
                         android:padding="15dp"
-                        android:src="@drawable/ic_notice">
+                        android:src="@drawable/ic_logout">
 
                     </ImageView>
 
@@ -271,7 +271,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="NOTICE"
+                        android:text="Log Out"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
