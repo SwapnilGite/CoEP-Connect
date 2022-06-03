@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/main_background"
+
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -152,9 +153,11 @@
                     <ImageView
                         android:layout_width="68dp"
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_purple"
+
+                        android:background="@drawable/circle_green"
                         android:padding="15dp"
-                        android:src="@drawable/ic_baseline_upload">
+                        android:src="@drawable/ic_book2">
+
 
                     </ImageView>
 
@@ -169,7 +172,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Upload Ebook"
+
+
+
+                        android:text="E-Books"
+
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
@@ -256,8 +263,8 @@
                         android:layout_height="71dp"
                         android:background="@drawable/circle_black"
                         android:padding="15dp"
-                        android:src="@drawable/ic_logout">
 
+                        android:src="@drawable/ic_logout">
                     </ImageView>
 
                     <View
@@ -275,9 +282,7 @@
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
-
                 </LinearLayout>
-
 
             </com.google.android.material.card.MaterialCardView>
 

@@ -9,16 +9,21 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
     private CardView cardViewNotice;
     private CardView logout;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+
+
+    private CardView uploadNotice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         cardViewNotice = (CardView) findViewById(R.id.addNotice);
         cardViewNotice.setOnClickListener(this);
         logout = (CardView)findViewById(R.id.Logout_btn);
@@ -34,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void openLogin() {
         startActivity(new Intent(MainActivity.this,LoginActivity.class));
         finish();
+
+        uploadNotice = (CardView) findViewById(R.id.addNotice);
+
+        uploadNotice.setOnClickListener(this);
+
     }
 
     @Override
@@ -44,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             i = new Intent(this, UploadNotice.class);
             startActivity(i);
             break;
+
             case R.id.Logout_btn:
 
                 editor.putString("isLogin","false");
@@ -52,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i2 = new Intent(this,LoginActivity.class);
                 startActivity(i2);
                 break;
+
+
+
         }
     }
 }
