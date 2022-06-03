@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.addEbook:
                 Intent j;
-                j = new Intent(this, UploadPdf.class);
+                j = new Intent(this, UploadEbook.class);
                 startActivity(j);
                 break;
 

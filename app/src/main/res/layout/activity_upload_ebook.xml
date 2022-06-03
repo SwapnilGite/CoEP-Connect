@@ -1,9 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".UploadEbook">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        >
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/upload_pdf"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="23dp"
+            android:layout_gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="144dp"
+                android:layout_height="140dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="71dp"
+                    android:background="@drawable/circle_blue"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_pdf">
+
+                </ImageView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/lightgrey" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Add PDF"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/pdfTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:text="No files selected">
+
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pdf_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Book Title"
+                android:background="@null"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"
+            android:id="@+id/uploadPDFBtn"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

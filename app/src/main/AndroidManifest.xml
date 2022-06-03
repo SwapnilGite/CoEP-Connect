@@ -15,11 +15,15 @@
         android:theme="@style/Theme.CollegeApp">
         <activity
             android:name=".UploadEbook"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"></activity>
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
+
+        </activity>
         <activity
             android:name=".UploadNotice"
             android:exported="false" />
