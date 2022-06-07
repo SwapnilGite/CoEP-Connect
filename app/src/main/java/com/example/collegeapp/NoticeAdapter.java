@@ -15,9 +15,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.connector.zza;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -55,6 +59,18 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
             @Override
             public void onClick(View view) {
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Notice");
+                StorageReference imageRef = FirebaseStorage.getInstance().getReferenceFromUrl(currentItem.image);
+                imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(context,"Notice Deleted",Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
                 reference.child(currentItem.getKey()).removeValue()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
