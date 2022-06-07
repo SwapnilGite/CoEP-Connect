@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private CardView cardViewNotice;
     private CardView cardViewEbook;
-
+    private CardView deleteNotice;
     private CardView logout;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         logout = (CardView)findViewById(R.id.Logout_btn);
         logout.setOnClickListener(this);
+
+        deleteNotice = (CardView)findViewById(R.id.remove);
+        deleteNotice.setOnClickListener(this);
 
         sharedPreferences = this.getSharedPreferences("login",MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -75,7 +78,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 j = new Intent(this, UploadEbook.class);
                 startActivity(j);
                 break;
-
+            case R.id.remove:
+                Intent r;
+                r = new Intent(this, deleteNotice.class);
+                startActivity(r);
+                break;
 
 
         }
