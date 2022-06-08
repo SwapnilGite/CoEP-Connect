@@ -11,6 +11,7 @@
              android:layout_width="match_parent"
             android:gravity="center_vertical"
             android:orientation="horizontal"
+            android:background="@color/lightgrey"
             android:layout_height="wrap_content">
              <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="36dp"
@@ -25,7 +26,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/kdam"
-                android:text="College App">
+                android:text="Admin">
 
             </TextView>
             <com.google.android.material.button.MaterialButton
@@ -34,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-100dp"
                 android:text="Delete"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                />
 
 
         </LinearLayout>
@@ -42,14 +44,16 @@
             android:id="@+id/deleteNoticeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="10dp"
             android:text="Testing"
             android:textSize="17sp"
             android:textColor="@color/black"/>
         <ImageView
             android:id="@+id/deleteNoticeImg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"/>
+            android:layout_height="240dp"
+            android:padding="3dp"
+            android:scaleType="fitCenter"/>
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

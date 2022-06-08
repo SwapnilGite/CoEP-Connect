@@ -18,11 +18,15 @@
             android:exported="false" />
         <activity
             android:name=".UploadEbook"
-            android:exported="false"></activity>
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"></activity>
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
+
+        </activity>
         <activity
             android:name=".UploadNotice"
             android:exported="false" />

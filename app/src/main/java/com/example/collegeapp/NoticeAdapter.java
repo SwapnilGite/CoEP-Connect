@@ -60,15 +60,17 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
             public void onClick(View view) {
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Notice");
                 StorageReference imageRef = FirebaseStorage.getInstance().getReferenceFromUrl(currentItem.image);
-                imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                imageRef.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
-                    public void onSuccess(Void aVoid) {
+                    public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(context,"Notice Deleted",Toast.LENGTH_SHORT).show();
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Something went wrong",Toast.LENGTH_SHORT).show();
+
                     }
                 });
                 reference.child(currentItem.getKey()).removeValue()
