@@ -70,6 +70,7 @@ public class UploadNotice extends AppCompatActivity {
         addnotice.setOnClickListener(new View.OnClickListener() { //adding image
             @Override
             public void onClick(View view) {
+
                 mGetContent.launch("image/*");
             }
         });

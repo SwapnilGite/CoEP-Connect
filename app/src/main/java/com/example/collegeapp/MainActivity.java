@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private CardView cardViewEbook;
     private CardView deleteNotice;
     private CardView logout;
+    private CardView FestImg;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         deleteNotice = (CardView)findViewById(R.id.remove);
         deleteNotice.setOnClickListener(this);
 
+        FestImg = (CardView)findViewById(R.id.FestImg);
+        FestImg.setOnClickListener(this);
+
         sharedPreferences = this.getSharedPreferences("login",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         if(sharedPreferences.getString("isLogin","false").equals("false"))
@@ -50,29 +54,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(new Intent(MainActivity.this,LoginActivity.class));
         finish();
 
-
-
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.addNotice:
-            Intent i;
-            i = new Intent(this, UploadNotice.class);
-            startActivity(i);
-            break;
+
+                Intent i;
+                i = new Intent(this, UploadNotice.class);
+                startActivity(i);
+                break;
 
             case R.id.Logout_btn:
-
                 editor.putString("isLogin","false");
                 editor.commit();
                 Intent i2;
                 i2 = new Intent(this,LoginActivity.class);
                 startActivity(i2);
                 break;
-
-
             case R.id.addEbook:
                 Intent j;
                 j = new Intent(this, UploadEbook.class);
@@ -83,7 +83,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 r = new Intent(this, deleteNotice.class);
                 startActivity(r);
                 break;
-
+            case R.id.FestImg:
+                Intent img;
+                img = new Intent(this, uploadImageActivity.class);
+                startActivity(img);
+                break;
 
         }
     }
