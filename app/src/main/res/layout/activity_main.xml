@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="@drawable/main_background"
+    android:background="@drawable/bg1"
 
     >
     <LinearLayout
@@ -45,15 +45,17 @@
                 <LinearLayout
                     android:layout_width="145dp"
                     android:layout_height="139dp"
-                    android:background="@color/white"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:background="@color/white"
+                    android:orientation="vertical"
+
+                    >
 
 
                     <ImageView
                         android:layout_width="68dp"
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_red"
+                        android:background="@drawable/circle_purple"
                         android:padding="15dp"
                         android:src="@drawable/ic_notice">
 
@@ -153,7 +155,7 @@
                     <ImageView
                         android:layout_width="68dp"
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_green"
+                        android:background="@drawable/circle_blue"
                         android:padding="15dp"
                         android:src="@drawable/ic_pdf">
 
@@ -201,7 +203,7 @@
                         android:layout_width="68dp"
 
                         android:layout_height="71dp"
-                        android:background="@drawable/circle_pink"
+                        android:background="@drawable/circle_red"
                         android:padding="15dp"
                         android:src="@drawable/ic_delete">
 

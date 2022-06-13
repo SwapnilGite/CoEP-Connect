@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/drawable/bottom_round.xml" value="0.151" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/drawable/circle_blue.xml" value="0.151" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/drawable/circle_pink.xml" value="0.151" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/drawable/ic_pdf.xml" value="0.151" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/layout/activity_delete_notice.xml" value="0.1" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/layout/activity_login.xml" value="0.17083333333333334" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/layout/activity_main.xml" value="0.10740740740740741" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/layout/activity_upload_ebook.xml" value="0.17083333333333334" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/layout/activity_upload_notice.xml" value="0.17083333333333334" />
+        <entry key="..\:/SEM 4/RPPOPS/project/update4/CollegeApp/app/src/main/res/layout/newsfeed_itemlayout.xml" value="0.1" />
         <entry key="..\:/SEM 4/RPPOPS/project/updated3/CollegeApp/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CollegeApp/app/src/main/res/drawable/circle_blue.xml" value="0.185" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CollegeApp/app/src/main/res/drawable/circle_green.xml" value="0.185" />
